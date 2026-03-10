@@ -8,10 +8,10 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-[#0B1220]/90 backdrop-blur-sm border-b border-[#374151]">
       <div className="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 font-bold text-slate-900 text-lg">
+        <Link href="/" className="flex items-center gap-2.5 font-bold text-white text-lg">
           <Image
             src="/images/icon.png"
             alt="My Social Battery"
@@ -23,25 +23,25 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-          <a href="/#features" className="hover:text-emerald-600 transition-colors">Features</a>
-          <a href="/#activities" className="hover:text-emerald-600 transition-colors">Activities</a>
-          <a href="/#privacy" className="hover:text-emerald-600 transition-colors">Privacy</a>
-          <Link href="/blog" className="hover:text-emerald-600 transition-colors">Blog</Link>
-          <Link href="/faq" className="hover:text-emerald-600 transition-colors">FAQ</Link>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#94A3B8]">
+          <a href="/#features" className="hover:text-emerald-400 transition-colors">Features</a>
+          <a href="/#activities" className="hover:text-emerald-400 transition-colors">Activities</a>
+          <a href="/#privacy" className="hover:text-emerald-400 transition-colors">Privacy</a>
+          <Link href="/blog" className="hover:text-emerald-400 transition-colors">Blog</Link>
+          <Link href="/faq" className="hover:text-emerald-400 transition-colors">FAQ</Link>
         </nav>
 
         {/* CTA */}
         <a
           href="/#download"
-          className="hidden md:inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors"
+          className="hidden md:inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors"
         >
           Get Early Access
         </a>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 text-slate-600"
+          className="md:hidden p-2 text-[#94A3B8]"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -59,12 +59,12 @@ export default function Header() {
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-600">
-          <a href="/#features" onClick={() => setMenuOpen(false)} className="hover:text-emerald-600">Features</a>
-          <a href="/#activities" onClick={() => setMenuOpen(false)} className="hover:text-emerald-600">Activities</a>
-          <a href="/#privacy" onClick={() => setMenuOpen(false)} className="hover:text-emerald-600">Privacy</a>
-          <Link href="/blog" onClick={() => setMenuOpen(false)} className="hover:text-emerald-600">Blog</Link>
-          <Link href="/faq" onClick={() => setMenuOpen(false)} className="hover:text-emerald-600">FAQ</Link>
+        <div className="md:hidden border-t border-[#374151] bg-[#0F172A] px-6 py-4 flex flex-col gap-4 text-sm font-medium text-[#94A3B8]">
+          <a href="/#features" onClick={() => setMenuOpen(false)} className="hover:text-emerald-400">Features</a>
+          <a href="/#activities" onClick={() => setMenuOpen(false)} className="hover:text-emerald-400">Activities</a>
+          <a href="/#privacy" onClick={() => setMenuOpen(false)} className="hover:text-emerald-400">Privacy</a>
+          <Link href="/blog" onClick={() => setMenuOpen(false)} className="hover:text-emerald-400">Blog</Link>
+          <Link href="/faq" onClick={() => setMenuOpen(false)} className="hover:text-emerald-400">FAQ</Link>
           <a
             href="/#download"
             onClick={() => setMenuOpen(false)}

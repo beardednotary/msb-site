@@ -36,33 +36,35 @@ export default function EmailSignup() {
 
   if (status === "success") {
     return (
-      <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 text-center">
+      <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6 text-center">
         <div className="text-2xl mb-2">🎉</div>
-        <p className="text-emerald-800 font-medium">{message}</p>
+        <p className="text-emerald-400 font-medium">{message}</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-        required
-        className="flex-1 px-4 py-3 rounded-full border border-gray-200 bg-white text-slate-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
-      />
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className="bg-emerald-500 hover:bg-emerald-600 disabled:bg-emerald-300 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm whitespace-nowrap"
-      >
-        {status === "loading" ? "Subscribing…" : "Notify Me"}
-      </button>
+    <div>
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+          required
+          className="flex-1 px-4 py-3 rounded-full border border-[#374151] bg-[#0F172A] text-white placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+        />
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="bg-emerald-500 hover:bg-emerald-400 disabled:bg-emerald-800 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm whitespace-nowrap"
+        >
+          {status === "loading" ? "Subscribing…" : "Notify Me"}
+        </button>
+      </form>
       {status === "error" && (
-        <p className="text-red-500 text-xs mt-1 text-center w-full">{message}</p>
+        <p className="text-red-400 text-xs mt-2 text-center">{message}</p>
       )}
-    </form>
+    </div>
   );
 }
