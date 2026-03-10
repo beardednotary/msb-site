@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 export default function EmailSignup() {
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -16,13 +17,14 @@ export default function EmailSignup() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, firstName }),
       });
       const data = await res.json();
 
       if (res.ok) {
         setStatus("success");
         setMessage("You're on the list! We'll notify you when the app launches.");
+        setFirstName("");
         setEmail("");
       } else {
         setStatus("error");
@@ -45,19 +47,28 @@ export default function EmailSignup() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
-          required
-          className="flex-1 px-4 py-3 rounded-full border border-[#374151] bg-[#0F172A] text-white placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
-        />
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            placeholder="First name"
+            className="flex-1 px-4 py-3 rounded-full border border-[#374151] bg-[#0F172A] text-white placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+          />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+            required
+            className="flex-1 px-4 py-3 rounded-full border border-[#374151] bg-[#0F172A] text-white placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+          />
+        </div>
         <button
           type="submit"
           disabled={status === "loading"}
-          className="bg-emerald-500 hover:bg-emerald-400 disabled:bg-emerald-800 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm whitespace-nowrap"
+          className="bg-emerald-500 hover:bg-emerald-400 disabled:bg-emerald-800 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
         >
           {status === "loading" ? "Subscribing…" : "Notify Me"}
         </button>

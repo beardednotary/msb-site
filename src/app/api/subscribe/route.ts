@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  const { email } = await request.json();
+  const { email, firstName } = await request.json();
 
   if (!email || !email.includes("@")) {
     return NextResponse.json({ error: "Valid email required." }, { status: 400 });
@@ -30,6 +30,7 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       email_address: email,
       status: "subscribed",
+      ...(firstName ? { merge_fields: { FNAME: firstName } } : {}),
     }),
   });
 
