@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ScreenshotCarousel from "@/components/ScreenshotCarousel";
 import EmailSignup from "@/components/EmailSignup";
 
 export const metadata: Metadata = {
@@ -84,17 +85,9 @@ export default function HomePage() {
             </a>
           </div>
 
-          {/* Phone mockup */}
+          {/* App screenshots carousel */}
           <div className="mt-14 flex justify-center">
-            <div className="relative w-52 bg-[#0F172A] rounded-3xl shadow-2xl border border-[#374151] p-6 flex flex-col items-center gap-2">
-              <div className="text-5xl">⚡</div>
-              <h3 className="font-bold text-white text-base">My Social Battery</h3>
-              <p className="text-[#94A3B8] text-xs text-center">Track your social energy patterns</p>
-              <div className="mt-2 w-full bg-[#374151] rounded-full h-2.5 overflow-hidden">
-                <div className="bg-emerald-500 h-2.5 rounded-full w-3/4" />
-              </div>
-              <p className="text-emerald-400 text-xs font-medium">Battery: 75%</p>
-            </div>
+            <ScreenshotCarousel />
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -46,6 +47,13 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-9268X7LR9M" strategy="afterInteractive" />
+        <Script id="ga-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9268X7LR9M');
+        `}</Script>
       </body>
     </html>
   );
