@@ -14,10 +14,10 @@ export default function EmailSignup() {
 
     setStatus("loading");
     try {
-      const res = await fetch("/api/subscribe", {
+      const res = await fetch("https://formspree.io/f/xwvrlglj", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, firstName }),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ firstName, email }),
       });
       const data = await res.json();
 
