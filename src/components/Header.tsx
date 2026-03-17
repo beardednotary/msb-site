@@ -33,10 +33,15 @@ export default function Header() {
 
         {/* CTA */}
         <a
-          href="/#download"
+          href="https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors"
         >
-          Get Early Access
+          <svg className="w-4 h-4" viewBox="0 0 814 1000" fill="currentColor">
+            <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.3-165.9-117.1c-72.3-101.4-131.1-258.7-131.1-407.8 0-159.6 104.1-244.2 205.9-244.2 54.1 0 99.1 35.6 133.2 35.6 32.5 0 83.5-37.6 144.1-37.6 23.7 0 108.1 2 166.1 77.3zm-180.8-100.8c27.8-33.1 47.5-79.1 47.5-125.1 0-6.4-.6-12.8-1.9-18.5-45 1.9-99 30.2-131.3 67.9-25.1 28.5-48.4 74.5-48.4 121.2 0 7.1 1.3 14.2 1.9 16.5 2.6.6 6.5 1.3 10.4 1.3 40.4 0 93.5-26.8 121.8-63.3z"/>
+          </svg>
+          Download Free
         </a>
 
         {/* Mobile menu button */}
@@ -66,11 +71,16 @@ export default function Header() {
           <Link href="/blog" onClick={() => setMenuOpen(false)} className="hover:text-emerald-400">Blog</Link>
           <Link href="/faq" onClick={() => setMenuOpen(false)} className="hover:text-emerald-400">FAQ</Link>
           <a
-            href="/#download"
+            href="https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
-            className="inline-flex items-center justify-center bg-emerald-500 text-white px-4 py-2 rounded-full w-full"
+            className="inline-flex items-center justify-center gap-2 bg-emerald-500 text-white px-4 py-2 rounded-full w-full"
           >
-            Get Early Access
+            <svg className="w-4 h-4" viewBox="0 0 814 1000" fill="currentColor">
+              <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.3-165.9-117.1c-72.3-101.4-131.1-258.7-131.1-407.8 0-159.6 104.1-244.2 205.9-244.2 54.1 0 99.1 35.6 133.2 35.6 32.5 0 83.5-37.6 144.1-37.6 23.7 0 108.1 2 166.1 77.3zm-180.8-100.8c27.8-33.1 47.5-79.1 47.5-125.1 0-6.4-.6-12.8-1.9-18.5-45 1.9-99 30.2-131.3 67.9-25.1 28.5-48.4 74.5-48.4 121.2 0 7.1 1.3 14.2 1.9 16.5 2.6.6 6.5 1.3 10.4 1.3 40.4 0 93.5-26.8 121.8-63.3z"/>
+            </svg>
+            Download Free
           </a>
         </div>
       )}

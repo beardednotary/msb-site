@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ScreenshotCarousel from "@/components/ScreenshotCarousel";
-import EmailSignup from "@/components/EmailSignup";
 
 export const metadata: Metadata = {
   title: "My Social Battery — Track & Optimize Your Social Energy",
@@ -72,10 +71,15 @@ export default function HomePage() {
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="#download"
+              href="https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-7 py-3.5 rounded-full transition-colors text-base"
             >
-              📱 Get Early Access
+              <svg className="w-5 h-5" viewBox="0 0 814 1000" fill="currentColor">
+                <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.3-165.9-117.1c-72.3-101.4-131.1-258.7-131.1-407.8 0-159.6 104.1-244.2 205.9-244.2 54.1 0 99.1 35.6 133.2 35.6 32.5 0 83.5-37.6 144.1-37.6 23.7 0 108.1 2 166.1 77.3zm-180.8-100.8c27.8-33.1 47.5-79.1 47.5-125.1 0-6.4-.6-12.8-1.9-18.5-45 1.9-99 30.2-131.3 67.9-25.1 28.5-48.4 74.5-48.4 121.2 0 7.1 1.3 14.2 1.9 16.5 2.6.6 6.5 1.3 10.4 1.3 40.4 0 93.5-26.8 121.8-63.3z"/>
+              </svg>
+              Download on the App Store
             </a>
             <a
               href="#features"
@@ -192,7 +196,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Download / Email CTA ─────────────────────────────────── */}
+      {/* ── Download CTA ─────────────────────────────────────────── */}
       <section id="download" className="py-20 md:py-28 px-6 bg-[#0B1220] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-500/8 rounded-full blur-3xl" />
@@ -202,11 +206,24 @@ export default function HomePage() {
             Ready to Optimize Your Social Energy?
           </h2>
           <p className="mt-4 text-[#94A3B8] text-lg">
-            Be among the first to know when My Social Battery launches and take control of your social energy.
+            My Social Battery is now available on the App Store. Start tracking, understanding, and protecting your energy today.
           </p>
 
-          <div className="mt-8">
-            <EmailSignup />
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-black font-semibold px-7 py-4 rounded-2xl transition-colors text-base shadow-lg"
+            >
+              <svg className="w-7 h-7" viewBox="0 0 814 1000" fill="currentColor">
+                <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.3-165.9-117.1c-72.3-101.4-131.1-258.7-131.1-407.8 0-159.6 104.1-244.2 205.9-244.2 54.1 0 99.1 35.6 133.2 35.6 32.5 0 83.5-37.6 144.1-37.6 23.7 0 108.1 2 166.1 77.3zm-180.8-100.8c27.8-33.1 47.5-79.1 47.5-125.1 0-6.4-.6-12.8-1.9-18.5-45 1.9-99 30.2-131.3 67.9-25.1 28.5-48.4 74.5-48.4 121.2 0 7.1 1.3 14.2 1.9 16.5 2.6.6 6.5 1.3 10.4 1.3 40.4 0 93.5-26.8 121.8-63.3z"/>
+              </svg>
+              <span className="flex flex-col items-start leading-tight">
+                <span className="text-xs font-normal">Download on the</span>
+                <span className="text-lg font-bold">App Store</span>
+              </span>
+            </a>
           </div>
 
           <p className="mt-5 text-[#374151] text-sm">

@@ -10,8 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
           <div className="flex flex-col gap-3">
             <h4 className="text-xs font-semibold text-white uppercase tracking-wider">App</h4>
-            <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-emerald-400 transition-colors">
-              Download iOS
+            <a href="https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-emerald-400 transition-colors">
+              Download on iOS
             </a>
             <span className="text-sm text-[#374151]">
               Android <span className="text-xs">(coming soon)</span>
