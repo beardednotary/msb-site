@@ -113,12 +113,12 @@ export default function BlogPage() {
       {/* CTA */}
       <section className="py-16 md:py-24 px-6 bg-emerald-600 text-white text-center">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold">Ready to Recharge Your Social Life?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Download on the App Store</h2>
           <p className="mt-4 text-lg text-emerald-100 max-w-3xl mx-auto">
             Discover how My Social Battery can help you understand and optimize your social energy.
           </p>
           <Link
-            href="/#download"
+            href="https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267" target="_blank" rel="noopener noreferrer"
             className="inline-block bg-white text-emerald-600 font-bold text-lg px-8 py-4 rounded-xl mt-8 hover:bg-slate-100 transition-colors"
           >
             Learn More

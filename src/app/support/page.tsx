@@ -11,8 +11,8 @@ const topics = [
   {
     icon: "📱",
     title: "App Access",
-    text: "My Social Battery is currently in development. Join the waitlist on our homepage to be notified when it launches.",
-    cta: { label: "Join the Waitlist", href: "/#download" },
+    text: "My Social Battery is now available on the App Store — free to download, no subscription required.",
+    cta: { label: "Download on the App Store", href: "https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267" },
   },
   {
     icon: "🔒",

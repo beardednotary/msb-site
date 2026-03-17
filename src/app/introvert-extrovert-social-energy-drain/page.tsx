@@ -205,10 +205,10 @@ export default function IntrovertExtrovertPage() {
           </ul>
           <div className="text-center mt-12">
             <Link
-              href="/#download"
+              href="https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267" target="_blank" rel="noopener noreferrer"
               className="inline-block bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors"
             >
-              Ready to Recharge Your Social Life?
+              Download on the App Store
             </Link>
           </div>
         </div>

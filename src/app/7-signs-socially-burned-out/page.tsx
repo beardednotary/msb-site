@@ -109,10 +109,10 @@ export default function SevenSignsPage() {
             triggers, and build a social life that truly recharges you.
           </p>
           <Link
-            href="/#download"
+            href="https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267" target="_blank" rel="noopener noreferrer"
             className="inline-block bg-white text-emerald-600 font-bold text-lg px-8 py-4 rounded-xl mt-8 hover:bg-slate-100 transition-colors"
           >
-            Ready to Recharge Your Social Life?
+            Download on the App Store
           </Link>
         </div>
       </section>
