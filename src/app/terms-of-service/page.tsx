@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Terms of Service — My Social Battery",
   description:
     "Terms of Service for My Social Battery. Understand the legal agreements, user responsibilities, and conditions for using our app and website.",
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
 };
 
 export default function TermsOfServicePage() {

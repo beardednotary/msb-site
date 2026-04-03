@@ -106,7 +106,12 @@ export default function SevenSignsPage() {
           <p className="mt-4 text-lg text-emerald-100 max-w-3xl mx-auto">
             Recognizing the signs of social burnout is powerful, but understanding your unique energy
             patterns is transformative. My Social Battery helps you track your social energy, pinpoint your
-            triggers, and build a social life that truly recharges you.
+            triggers, and build a social life that truly recharges you. If part of the drain is coming
+            from specific relationships, try{" "}
+            <Link href="/the-friendship-audit/" className="underline decoration-emerald-100/70 underline-offset-2 hover:text-white">
+              The Friendship Audit
+            </Link>{" "}
+            to identify which connections energize you and which may need better boundaries.
           </p>
           <Link
             href="https://apps.apple.com/us/app/my-social-battery-tracker/id6759211267" target="_blank" rel="noopener noreferrer"

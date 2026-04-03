@@ -1,10 +1,25 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ScreenshotCarousel from "@/components/ScreenshotCarousel";
 
 export const metadata: Metadata = {
-  title: "My Social Battery — Track & Optimize Your Social Energy",
+  title: "My Social Battery – Track Your Social Energy | Free iOS App",
   description:
-    "Are you drained by social interactions? Discover how they affect your energy and get personalized insights to effortlessly optimize your social calendar and well-being.",
+    "My Social Battery helps you track what drains and recharges your social energy with private, on-device insights. No account required. Download free on iPhone.",
+  openGraph: {
+    title: "My Social Battery – Track Your Social Energy | Free iOS App",
+    description:
+      "Track what drains and recharges your social energy with private, on-device insights. No account required. Download free on iPhone.",
+    url: "https://mysocialbattery.app/",
+    type: "website",
+    siteName: "My Social Battery",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "My Social Battery – Track Your Social Energy | Free iOS App",
+    description:
+      "Track what drains and recharges your social energy with private, on-device insights. No account required. Download free on iPhone.",
+  },
 };
 
 const features = [
@@ -89,6 +104,16 @@ export default function HomePage() {
             </a>
           </div>
 
+          <p className="mt-4 text-sm text-[#94A3B8]">
+            Looking for the best{" "}
+            <Link
+              href="/social-battery-app/"
+              className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2"
+            >
+              social battery app for iPhone?
+            </Link>
+          </p>
+
           {/* App screenshots carousel */}
           <div className="mt-14 flex justify-center">
             <ScreenshotCarousel />
@@ -151,8 +176,10 @@ export default function HomePage() {
 
           <p className="mt-12 max-w-3xl mx-auto text-center text-lg text-[#94A3B8]">
             By logging your energy before and after these diverse interactions, you&apos;ll gain powerful
-            clarity on what truly recharges your social battery and what drains it, empowering you to live
-            more intentionally.
+            clarity on what truly recharges your social battery and what drains it.{" "}
+            <Link href="/social-battery-app/" className="text-emerald-400 hover:text-emerald-300">
+              See how the app works →
+            </Link>
           </p>
         </div>
       </section>

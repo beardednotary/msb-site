@@ -188,7 +188,14 @@ export default function IntrovertExtrovertPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white">Practical Takeaways</h2>
-            <p className="mt-3 text-[#94A3B8]">Understanding your social energy type can transform how you approach relationships and daily life.</p>
+            <p className="mt-3 text-[#94A3B8]">
+              Understanding your social energy type can transform how you approach relationships and daily life.
+              For a more relationship-specific reflection, try{" "}
+              <Link href="/the-friendship-audit/" className="text-emerald-400 hover:underline">
+                The Friendship Audit
+              </Link>
+              .
+            </p>
           </div>
           <ul className="space-y-5">
             {[

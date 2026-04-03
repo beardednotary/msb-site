@@ -176,7 +176,12 @@ export default function PeoplePleasingPage() {
           </h2>
           <p className="mt-4 text-lg text-emerald-100 max-w-3xl mx-auto">
             Understanding your unique social energy patterns is the first step. This is where My Social
-            Battery makes a profound difference.
+            Battery makes a profound difference. If you&apos;re realizing certain relationships keep
+            pulling you into automatic yeses,{" "}
+            <Link href="/the-friendship-audit/" className="underline decoration-emerald-100/70 underline-offset-2 hover:text-white">
+              The Friendship Audit
+            </Link>{" "}
+            can help you reflect on which connections genuinely support you.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {[

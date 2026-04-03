@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Privacy Policy — My Social Battery",
   description:
     "Privacy Policy for My Social Battery. Learn how your data is collected, used, and protected. Your privacy and security are our top priority.",
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
 };
 
 export default function PrivacyPolicyPage() {
